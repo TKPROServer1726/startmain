@@ -100,9 +100,9 @@
             
             
             renderIPNick()
-            renderCurrentWeather()
+            //renderCurrentWeather()
             renderMyImage()
-            renderGalleryItem()
+            //renderGalleryItem()
         });
 
         //배경화면
@@ -157,13 +157,13 @@
         
         // 아이피 닉네임
         function renderIPNick() {
-          //{"ip":"66.249.75.9","country":"United States","cc":"US"}
           let url = `https://api.myip.com`
+          //{"ip":"66.249.75.9","country":"United States","cc":"US"}
           fetch(url)
-              .then(res => res.json()).then((data) => {
-                  let ip = `${data['ip']}`
-                  $('#MYNICKNAME').text(ip)
-              })
+                .then(res => res.json()).then((data) => {
+                    let content = `" ${data['ip']} "`
+                    $('#MYNICKNAME').text(content)
+                })
         }
     </script>
 </head>
