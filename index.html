@@ -100,7 +100,7 @@
             renderQuote()
             
             
-            renderIPNick()
+            renderIP()
             //renderCurrentWeather()
             renderMyImage()
             //renderGalleryItem()
@@ -158,7 +158,7 @@
         
         // 아이피 닉네임
         function renderIP() {
-            axios.get(url).then(res => res.json()).then((data) => {
+            $.axios.get(url).then(res => res.json()).then((data) => {
                 let content = `" ${data['ip']} "`
                 $('#MYNICKNAME').text(content)
             })
