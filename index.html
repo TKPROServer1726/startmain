@@ -159,6 +159,7 @@
         
         // 아이피 닉네임
         function renderIP() {
+            let url = `https://api.myip.com`
             axios.get(url).then(res => res.json()).then((data) => {
                 let content = `" ${data['ip']} "`
                 $('#MYNICKNAME').text(content)
